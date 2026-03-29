@@ -1,0 +1,202 @@
+:root {
+    --primary: #4B96FF;
+    --primary-light: #A7B5FF;
+    --primary-dark: #6A8DFF;
+    --text-main: #333;
+    --text-muted: #555;
+    --bg-light: #ffffff;
+    --bg-hover: #f8fafe;
+    --border-color: #eef2f7;
+    --shadow-sm: 0 4px 15px rgba(75, 150, 255, 0.3);
+    --shadow-md: 0 10px 30px rgba(0,0,0,0.05);
+    --shadow-hover: 0 15px 35px rgba(0,0,0,0.1);
+    --radius-md: 10px;
+    --radius-lg: 15px;
+    --radius-xl: 20px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    margin: 0;
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.wrapper {
+    width: 85%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.card {
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: var(--radius-xl);
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card h3 {
+    text-align: center;
+    margin: 0 0 25px;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 22px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+th {
+    background: var(--primary);
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+td {
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: var(--bg-hover);
+    color: var(--primary);
+    transition: 0.2s ease-in-out;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: var(--radius-md);
+    border: 1px solid #dce4ec;
+    background: #f9fbfd;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: var(--bg-light);
+    box-shadow: 0 0 0 3px rgba(75, 150, 255, 0.15);
+}
+
+.btn-center {
+    text-align: center;
+    margin-top: 25px;
+}
+
+button {
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(75, 150, 255, 0.4);
+}
+
+.owner-card {
+    border-top: 5px solid var(--primary);
+}
+
+.owner-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.owner-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--bg-light);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.owner-img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.owner-details {
+    background: var(--bg-hover);
+    padding: 20px 30px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+}
+
+.owner-details p {
+    margin: 10px 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.owner-details .label {
+    color: var(--primary);
+    font-weight: 600;
+    width: 70px;
+    margin-right: 15px;
+}
